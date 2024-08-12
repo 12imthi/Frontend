@@ -22,6 +22,12 @@ function Navbar() {
                         <li className="nav-item">
                             <Link className="nav-link" to="/register">Register</Link>
                         </li>
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/forgotpwd">ForgotPwd</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/resetpwd">ResetPwd</Link>
+                        </li>
                     </ul>
                 </div>
             </div>
