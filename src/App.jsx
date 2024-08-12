@@ -19,7 +19,7 @@ function App() {
             <div className="container mt-4"> {/* Add some top margin */}
                 <Routes>
                     <Route path="/" element={<Home/>} />
-                    <Route path="/login" element={<Login />} />
+                    <Route path="/login" element={<Login setToken={setToken} />} />
                     <Route path="/register" element={<Register />} />
                     <Route path="/forgotpwd" element={<ForgotPassword />} />
                     <Route path="/resetpwd" element={<ResetPassword setToken={setToken} />} />

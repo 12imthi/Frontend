@@ -6,7 +6,7 @@ const API_BASE_URL = 'http://localhost:5000/api'; // Replace with your server ad
 
 export const registerUser = async (userData) => {
     try {
-        const response = await axios.post(`${API_BASE_URL}/register-user`, userData);
+        const response = await axios.post(`${API_BASE_URL}/register`, userData);
         return response.data;
     } catch (error) {
         throw error.response.data; // Propagate the error message
@@ -15,7 +15,7 @@ export const registerUser = async (userData) => {
 
 export const loginUser = async (credentials) => {
     try {
-        const response = await axios.post(`${API_BASE_URL}/login-user`, credentials);
+        const response = await axios.post(`${API_BASE_URL}/login`, credentials);
         return response.data;
     } catch (error) {
         throw error.response.data; // Propagate the error message

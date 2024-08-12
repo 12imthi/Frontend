@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { loginUser } from '../api';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate
 
-const Login = () => {
+const Login = ({setToken}) => {
     const [credentials, setCredentials] = useState({
         email: '',
         password: ''
@@ -23,6 +23,7 @@ const Login = () => {
         try {
             const result = await loginUser(credentials);
             setMessage(result.message); // Show success message
+            setToken(result.token); // Show success message
             navigate('/'); 
             // Perform any further actions (e.g., redirecting, storing auth tokens)
         } catch (error) {
